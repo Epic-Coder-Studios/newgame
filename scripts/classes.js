@@ -12,11 +12,15 @@ class Sound {
         this.sound.play();
         if(this.sound.ended){
             document.body.removeChild(this.sound)
+            console.log("removed:"+this.sound)
         }
     }
     stop (){
         this.sound.pause();
-        
+        document.body.removeChild(this.sound)
+    }
+    purge(){
+        document.body.removeChild(this.sound)
     }
 }
 

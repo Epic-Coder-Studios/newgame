@@ -7,7 +7,9 @@ canvas.height = innerHeight
 
 const scoreEl = document.querySelector('#scoreEl')
 const startBtn = document.querySelector('#startButton')
+const menuBtn = document.querySelector('#menuButton')
 const modal = document.querySelector('#menu')
+const dedModal = document.querySelector('#dead')
 const bigScore = document.querySelector('#big-score')
 
 const speed = 5
@@ -120,7 +122,7 @@ function animate (){
             explode = new Sound('explode.mp3')
             explode.start()
             cancelAnimationFrame(animationId)
-            modal.style.display = 'flex'
+            dedModal.style.display = 'flex'
             bigScore.innerHTML = score
             track.stop()
         }        

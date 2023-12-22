@@ -31,3 +31,10 @@ startBtn.addEventListener('click',() => {
     bleep.start()
     
 })
+menuBtn.addEventListener('click',() => {
+    
+    dedmodal.style.display = 'none'
+    modal.style.display = 'flex'
+    bleep.start()
+    
+})
