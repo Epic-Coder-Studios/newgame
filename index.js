@@ -137,7 +137,7 @@ function init (){
     scoreEl.innerHTML = score
     bigScore.innerHTML = score
     bleep = new Sound('bleep.mp3')
-    shoot = new Sound('shoot.mp3')
+    
     track = new Sound('track.mp3',0.2)
     
     track.start()
@@ -293,6 +293,7 @@ addEventListener('click', (event) => {
         velocity
         
     ))
+    shoot = new Sound('shoot.mp3')
     shoot.start()
 
 })
