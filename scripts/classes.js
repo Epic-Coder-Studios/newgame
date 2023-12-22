@@ -10,10 +10,13 @@ class Sound {
     }
     start (){
         this.sound.play();
-        
+        if(this.sound.ended){
+            document.body.removeChild(this.sound)
+        }
     }
     stop (){
         this.sound.pause();
+        
     }
 }
 
