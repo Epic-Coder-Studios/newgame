@@ -224,6 +224,8 @@ function animate (){
 
         if (dist - enemy.radius - player.radius< 1){
             console.log("rip bozo")
+            explode = new Sound('explode.mp3')
+            explode.play()
             cancelAnimationFrame(animationId)
             modal.style.display = 'flex'
             bigScore.innerHTML = score
