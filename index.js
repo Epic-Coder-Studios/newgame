@@ -23,7 +23,7 @@ class Sound {
         this.sound.volume = vol || 1.0
         document.body.appendChild(this.sound);
     }
-    play (){
+    start (){
         this.sound.play();
         
     }
@@ -140,7 +140,7 @@ function init (){
     shoot = new Sound('shhot.mp3')
     track = new Sound('track.mp3',0.2)
     
-    track.play()
+    track.start()
 }
 
 
@@ -225,7 +225,7 @@ function animate (){
         if (dist - enemy.radius - player.radius< 1){
             console.log("rip bozo")
             explode = new Sound('explode.mp3')
-            explode.play()
+            explode.start()
             cancelAnimationFrame(animationId)
             modal.style.display = 'flex'
             bigScore.innerHTML = score
@@ -241,7 +241,7 @@ function animate (){
             //if collide    
             if (dist - enemy.radius - projectile.radius< 1){
                 explode = new Sound('explode.mp3')
-                explode.play()
+                explode.start()
                 //create explosion
                 for (let i = 0; i < enemy.radius * 2; i++){
                     particles.push(new Particle(
@@ -293,7 +293,7 @@ addEventListener('click', (event) => {
         velocity
         
     ))
-    shoot.play()
+    shoot.start()
 
 })
 startBtn.addEventListener('click',() => {
@@ -302,6 +302,6 @@ startBtn.addEventListener('click',() => {
     animate()
     spawnEnemies()
     modal.style.display = 'none'
-    bleep.play()
+    bleep.start()
     
 })
