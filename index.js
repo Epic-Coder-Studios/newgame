@@ -274,7 +274,7 @@ function animate (){
     })
 }
 
-addEventListener('click', (event) => {
+canvas.addEventListener('click', (event) => {
     // console.log(projectiles)
     const angle = Math.atan2(
         event.clientY - canvas.height / 2,
