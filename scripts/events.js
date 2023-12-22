@@ -33,7 +33,7 @@ startBtn.addEventListener('click',() => {
 })
 menuBtn.addEventListener('click',() => {
     
-    dedmodal.style.display = 'none'
+    dedModal.style.display = 'none'
     modal.style.display = 'flex'
     bleep.start()
     
